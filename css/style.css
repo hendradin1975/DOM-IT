@@ -10,16 +10,57 @@
     box-sizing: border-box;
 }
 
-body{
+@font-face {
+    font-family: 'wanpis';
+    src: url('../Fonts/OnePiece.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'druk';
+    src: url('../Fonts/Druk.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+    font-family: 'druk', sans-serif;
     margin: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .maincon {
     width: 100%;
     min-height: 100vh;
-    display: grid;
-    place-content: center;
-    gap: 1rem;
-    padding: 2rem;
-    text-align: center;
+    background-image: url('../images/Latar.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.layer {
+    background-color: rgba(41, 0, 36, 0.7);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tb1 {
+    background-color: red;
+    margin: 48px;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tb2 {
+    height: 70px;
+    background-color: blue;
+}
+
+.tb3 {
+    height: 734px;
+    background-color: cyan;
 }
