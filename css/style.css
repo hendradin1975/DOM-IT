@@ -11,13 +11,27 @@
     box-sizing: border-box;
 }
 
+h1, h2 {
+    margin: 0;
+}
+
 @font-face {
     font-family: 'wanpis';
     src: url('../Fonts/OnePiece.ttf');
     font-weight: normal;
     font-style: normal;
+}
+
+@font-face {
     font-family: 'druk';
     src: url('../Fonts/Druk.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'montserrat';
+    src: url('../Fonts/Montserrat.ttf');
     font-weight: normal;
     font-style: normal;
 }
@@ -45,7 +59,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: stretch;
-    padding: 48px;
+    padding: calc(48 * var(--u));
 }
 
 .container-tengah {
@@ -54,9 +68,7 @@ html, body {
     flex-direction: column;
 }
 
-
 .back-utama {
-    background-color: #D4954D;
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -64,20 +76,166 @@ html, body {
     width: calc(190 *var(--u));
     margin-bottom: calc(32 * var(--u));
     border-radius: calc(35 * var(--u));
+    align-items: center;
+    gap: calc(16 * var(--u));
+    text-decoration: none;
+    background: rgba(227, 222, 164, 0.4);
+    -webkit-backdrop-filter: blur(calc(3 * var(--u))) saturate(140%) brightness(1.05);
+    backdrop-filter: blur(calc(3 * var(--u))) saturate(140%) brightness(1.05);
+    box-shadow:
+        inset calc(2 * var(--u)) calc(2 * var(--u)) calc(3 * var(--u)) rgba(255, 255, 255, 0.55),
+        inset calc(-2 * var(--u)) calc(-2 * var(--u)) calc(3 * var(--u)) rgba(41, 0, 36, 0.25),
+        0 calc(8 * var(--u)) calc(24 * var(--u)) rgba(41, 0, 36, 0.25);
 }
 
 .logo-back {
-    width: 100px;
+    height: calc(32 * var(--u));
+    display: flex;
+    align-items: center;
+    margin-left: calc(20 * var(--u));
+}
+
+.logo-back img {
+    height: 100%;
+    width: auto;
+    display: block;
+    color: #F2F5E2;
 }
 
 .text-back {
-    color: #290024;
+    color: #F2F5E2;
+    font-family: 'druk', sans-serif;
+    font-size: calc(36 * var(--u));
+    line-height: 1;
+    text-box: trim-both cap alphabetic;
 }
 
 
 
 
 .container-bawah {
-    flex: 1;
-    background-color: #E3DEA4;
+    display: flex;
+    flex-direction: row;
+    height: calc(702 * var(--u));
+}
+
+.container-bawah-kiri {
+    background-color: #290024;
+    height: 100%;
+    width: calc(497 * var(--u));
+}
+
+.container-bawah-kiri img {
+    height: 100%;
+    width: auto;
+}
+
+.container-bawah-kanan {
+    height: 100%;
+    width: 100%;
+    margin-left: calc(32 * var(--u));
+    display: flex;
+    flex-direction: column;
+}
+
+.nama-IG {
+    height: calc(177 * var(--u));
+    width: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.nama {
+    color: #F2F5E2;
+    font-family: 'wanpis';
+    font-size: calc(128 * var(--u));
+    line-height: 1;
+    text-box: trim-both cap alphabetic;
+}
+
+.IG {
+    margin-top: calc(23 * var(--u));
+    display: flex;
+    flex-direction: row;
+    height: calc(47 * var(--u));
+    width: 100%;
+    align-items: center;
+}
+
+.IG .logo-IG {
+    height: calc(40 * var(--u));
+    width: auto;
+    margin-right: calc(12 * var(--u));
+}
+
+.IG .logo-separator {
+    height: calc(40 * var(--u));
+    width: auto;
+    margin-right: calc(12 * var(--u));
+}
+
+.IG h2 {
+    font-size: calc(40 * var(--u));
+    color: #F2F5E2;
+    font-family: 'montserrat';
+}
+
+.biodata {
+    height: calc(417 * var(--u));
+    width: auto;
+    background-color: #D4954D;
+    border-radius: 0 calc(35 * var(--u)) 0 calc(35 * var(--u));
+}
+
+.biodata .profil {
+    font-family: 'druk';
+    color: #F2F5E2;
+    background-color: #775533;
+    margin: calc(20 * var(--u));
+    padding: calc(20 * var(--u));
+    border-radius: 0 calc(10 * var(--u)) 0 0;
+    height: calc(135 * var(--u));
+}
+
+.profil h1 {
+    font-family: 'druk';
+    font-size: calc(36 * var(--u));
+}
+
+.profil h2 {
+    font-family: 'montserrat';
+    font-size: calc(24 * var(--u));
+}
+
+.biodata .hobi-lagu {
+    background-color: #775533;
+    height: calc(132 * var(--u));
+    margin: 0 calc(20 * var(--u)) 0 calc(20 * var(--u));
+    display: flex;
+    gap: calc(20 * var(--u));
+}
+
+.hobi {
+    background-color: red;
+    width: calc(434 * var(--u));
+}
+
+.lagu {
+    background-color: blue;
+    width: calc(321 * var(--u));
+}
+
+.biodata .quotes {
+    background-color: #775533;
+    height: calc(70 * var(--u));
+    margin: calc(20 * var(--u)) calc(20 * var(--u)) 0 calc(20 * var(--u));
+    border-radius: 0 0 0 calc(10 * var(--u));
+    padding: calc(20 * var(--u));
+}
+
+
+.navbar {
+    height: calc(108 * var(--u));
+    width: auto;
+    background-color: #D4954D;
 }
