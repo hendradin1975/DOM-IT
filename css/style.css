@@ -64,6 +64,8 @@ html, body {
 
 .container-tengah {
     width: 100%;
+    max-width: calc(1344 * var(--u));
+    margin-inline: auto;
     display: flex;
     flex-direction: column;
 }
@@ -117,22 +119,24 @@ html, body {
     display: flex;
     flex-direction: row;
     height: calc(702 * var(--u));
+    min-width: 0;
 }
 
 .container-bawah-kiri {
-    background-color: #290024;
+    flex: 0 0 calc(497 * var(--u));
     height: 100%;
-    width: calc(497 * var(--u));
 }
 
 .container-bawah-kiri img {
+    display: block;
     height: 100%;
     width: auto;
 }
 
 .container-bawah-kanan {
+    flex: 1;
+    min-width: 0;
     height: 100%;
-    width: 100%;
     margin-left: calc(32 * var(--u));
     display: flex;
     flex-direction: column;
@@ -184,7 +188,14 @@ html, body {
     height: calc(417 * var(--u));
     width: auto;
     background-color: #D4954D;
-    border-radius: 0 calc(35 * var(--u)) 0 calc(35 * var(--u));
+    border-radius: 0 calc(50 * var(--u)) 0 calc(50 * var(--u));
+    background: rgba(227, 222, 164, 0.4);
+    -webkit-backdrop-filter: blur(calc(3 * var(--u))) saturate(140%) brightness(1.05);
+    backdrop-filter: blur(calc(3 * var(--u))) saturate(140%) brightness(1.05);
+    box-shadow:
+        inset calc(2 * var(--u)) calc(2 * var(--u)) calc(3 * var(--u)) rgba(255, 255, 255, 0.55),
+        inset calc(-2 * var(--u)) calc(-2 * var(--u)) calc(3 * var(--u)) rgba(41, 0, 36, 0.25),
+        0 calc(8 * var(--u)) calc(24 * var(--u)) rgba(41, 0, 36, 0.25);
 }
 
 .biodata .profil {
@@ -192,45 +203,85 @@ html, body {
     color: #F2F5E2;
     background-color: #775533;
     margin: calc(20 * var(--u));
-    padding: calc(20 * var(--u));
-    border-radius: 0 calc(10 * var(--u)) 0 0;
+    padding: calc(19 * var(--u)) calc(20 * var(--u)) calc(20 * var(--u)) calc(20 * var(--u));
+    border-radius: 0 calc(30 * var(--u)) 0 0;
     height: calc(135 * var(--u));
 }
 
 .profil h1 {
     font-family: 'druk';
     font-size: calc(36 * var(--u));
+    margin-block: 0;
+    padding-block: 0;
+    line-height: 1;
+    margin-bottom: calc(14 * var(--u));
 }
 
 .profil h2 {
     font-family: 'montserrat';
     font-size: calc(24 * var(--u));
     font-weight: 600;
+    line-height: 1;
 }
 
 .biodata .hobi-lagu {
-    background-color: #775533;
     height: calc(132 * var(--u));
-    margin: 0 calc(20 * var(--u)) 0 calc(20 * var(--u));
+    margin: 0 calc(20 * var(--u));
     display: flex;
     gap: calc(20 * var(--u));
 }
 
-.hobi {
-    background-color: red;
-    width: calc(434 * var(--u));
+.container-hobi {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #775533;
+    flex: 57;
+    font-family: 'druk';
+    padding: calc(19 * var(--u)) calc(10 * var(--u)) calc(20 * var(--u)) calc(20 * var(--u));
+    border-radius: 0 calc(20 * var(--u)) calc(20 * var(--u)) 0;
 }
 
-.lagu {
-    background-color: blue;
-    width: calc(321 * var(--u));
+.text-hobi h1 {
+    font-size: calc(36 * var(--u));
+    color: #F2F5E2;
+}
+
+.text-hobi ul {
+    margin: 0;
+    padding-left: calc(25 * var(--u));
+}
+
+.text-hobi li {
+    font-family: 'montserrat';
+    font-size: calc(20 * var(--u));
+    line-height: 1.3;
+    color: #F2F5E2;
+}
+
+.gambar-hobi {
+    height: calc(108 * var(--u));
+    width: calc(108 * var(--u));
+}
+
+.gambar-hobi img {
+    width: 100%;
+    height: 100%;
+    border-radius: calc(10 * var(--u));
+}
+
+.container-lagu {
+    background-color: #775533;
+    flex: 43;
+    padding: calc(19 * var(--u)) calc(20 * var(--u)) calc(20 * var(--u)) calc(20 * var(--u));
+    border-radius: calc(20 * var(--u)) 0 0 calc(20 * var(--u));
 }
 
 .biodata .quotes {
     background-color: #775533;
     height: calc(70 * var(--u));
     margin: calc(20 * var(--u)) calc(20 * var(--u)) 0 calc(20 * var(--u));
-    border-radius: 0 0 0 calc(10 * var(--u));
+    border-radius: 0 0 0 calc(30 * var(--u));
     padding: calc(20 * var(--u));
 }
 
@@ -262,10 +313,8 @@ html, body {
     transform: rotate(180deg)
 }
 
-.container-nama {}
-
 .container-nama-2 {
-    width: calc(550 * var(--u));
+    width: calc(450 * var(--u));
     height: calc(70 * var(--u));
     background-color: #F2F5E2;
     display: flex;
@@ -294,7 +343,7 @@ html, body {
 
 .ardika {
     background-color: #290024;
-    width: calc(150 * var(--u));
+    width: calc(50 * var(--u));
     height: calc(50 * var(--u));
     border-radius: calc(25 * var(--u));
     display: flex;
@@ -305,7 +354,7 @@ html, body {
 
 .djasta {
     background-color: #290024;
-    width: calc(150 * var(--u));
+    width: calc(50 * var(--u));
     height: calc(50 * var(--u));
     border-radius: calc(25 * var(--u));
     display: flex;
@@ -316,7 +365,7 @@ html, body {
 
 .suwang {
     background-color: #290024;
-    width: calc(150 * var(--u));
+    width: calc(50 * var(--u));
     height: calc(50 * var(--u));
     border-radius: calc(25 * var(--u));
     display: flex;
@@ -327,7 +376,7 @@ html, body {
 
 .vidya {
     background-color: #290024;
-    width: calc(150 * var(--u));
+    width: calc(50 * var(--u));
     height: calc(50 * var(--u));
     border-radius: calc(25 * var(--u));
     display: flex;
