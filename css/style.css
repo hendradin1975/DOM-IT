@@ -205,6 +205,7 @@ html, body {
 .profil h2 {
     font-family: 'montserrat';
     font-size: calc(24 * var(--u));
+    font-weight: 600;
 }
 
 .biodata .hobi-lagu {
@@ -233,9 +234,104 @@ html, body {
     padding: calc(20 * var(--u));
 }
 
-
 .navbar {
     height: calc(108 * var(--u));
     width: auto;
-    background-color: #D4954D;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+
+.container-list {
+    background-color: #290024;
+    width: calc(280 * var(--u));
+    height: calc(70 * var(--u));
+    border-radius: calc(35 * var(--u));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-list h1 {
+    font-family: 'druk';
+    color: #F2F5E2;
+}
+
+.container-list img {
+    height: calc(32 * var(--u));
+    transform: rotate(180deg)
+}
+
+.container-nama {}
+
+.container-nama-2 {
+    width: calc(550 * var(--u));
+    height: calc(70 * var(--u));
+    background-color: #F2F5E2;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: calc(35 * var(--u));
+    background: rgba(227, 222, 164, 0.4);
+    -webkit-backdrop-filter: blur(calc(3 * var(--u))) saturate(140%) brightness(1.05);
+    backdrop-filter: blur(calc(3 * var(--u))) saturate(140%) brightness(1.05);
+    box-shadow:
+        inset calc(2 * var(--u)) calc(2 * var(--u)) calc(3 * var(--u)) rgba(255, 255, 255, 0.55),
+        inset calc(-2 * var(--u)) calc(-2 * var(--u)) calc(3 * var(--u)) rgba(41, 0, 36, 0.25),
+        0 calc(8 * var(--u)) calc(24 * var(--u)) rgba(41, 0, 36, 0.25);
+}
+
+.hendra {
+    background-color: #290024;
+    width: calc(150 * var(--u));
+    height: calc(50 * var(--u));
+    border-radius: calc(25 * var(--u));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F2F5E2;
+}
+
+.ardika {
+    background-color: #290024;
+    width: calc(150 * var(--u));
+    height: calc(50 * var(--u));
+    border-radius: calc(25 * var(--u));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F2F5E2;
+}
+
+.djasta {
+    background-color: #290024;
+    width: calc(150 * var(--u));
+    height: calc(50 * var(--u));
+    border-radius: calc(25 * var(--u));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F2F5E2;
+}
+
+.suwang {
+    background-color: #290024;
+    width: calc(150 * var(--u));
+    height: calc(50 * var(--u));
+    border-radius: calc(25 * var(--u));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F2F5E2;
+}
+
+.vidya {
+    background-color: #290024;
+    width: calc(150 * var(--u));
+    height: calc(50 * var(--u));
+    border-radius: calc(25 * var(--u));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F2F5E2;
 }
