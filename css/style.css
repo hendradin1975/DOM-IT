@@ -4,6 +4,7 @@
     --golden-apricot: #D4954D;
     --olive-wood: #775533;
     --midnight-violet: #290024;
+    --u: min(100vw / 1440, 100vh / 900);
 }
 
 * {
@@ -28,7 +29,7 @@ html, body {
     height: 100%;
 }
 
-.maincon {
+.container-utama {
     width: 100%;
     min-height: 100vh;
     background-image: url('../images/Latar.jpg');
@@ -37,30 +38,46 @@ html, body {
     background-repeat: no-repeat;
 }
 
-.layer {
+.layer-transparan {
     background-color: rgba(41, 0, 36, 0.7);
     width: 100%;
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
+    padding: 48px;
 }
 
-.tb1 {
-    background-color: red;
-    margin: 48px;
+.container-tengah {
     width: 100%;
-    max-width: 1200px;
     display: flex;
     flex-direction: column;
 }
 
-.tb2 {
-    height: 70px;
-    background-color: blue;
+
+.back-utama {
+    background-color: #D4954D;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    height: calc(70 * var(--u));
+    width: calc(190 *var(--u));
+    margin-bottom: calc(32 * var(--u));
+    border-radius: calc(35 * var(--u));
 }
 
-.tb3 {
-    height: 734px;
-    background-color: cyan;
+.logo-back {
+    width: 100px;
+}
+
+.text-back {
+    color: #290024;
+}
+
+
+
+
+.container-bawah {
+    flex: 1;
+    background-color: #E3DEA4;
 }
