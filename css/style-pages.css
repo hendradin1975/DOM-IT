@@ -5,6 +5,23 @@
     --olive-wood: #775533;
     --midnight-violet: #290024;
     --u: min(100vw / 1440, 100vh / 900);
+
+    /* Glass Effect */
+    --glass-beige: rgba(242, 245, 226, 0.18);
+    --glass-vanilla-custard: rgba(227, 222, 164, 0.18);
+    --glass-golden-apricot: rgba(212, 149, 77, 0.20);
+    --glass-olive-wood: rgba(119, 85, 51, 0.25);
+    --glass-midnight-violet: rgba(41, 0, 36, 0.45);
+
+    /* Glass Border */
+    --glass-border-beige: rgba(242, 245, 226, 0.30);
+    --glass-border-vanilla-custard: rgba(227, 222, 164, 0.30);
+    --glass-border-golden-apricot: rgba(212, 149, 77, 0.35);
+    --glass-border-olive-wood: rgba(119, 85, 51, 0.40);
+    --glass-border-midnight-violet: rgba(242, 245, 226, 0.15);
+
+    /* Blur */
+    --glass-blur: 12px;
 }
 
 * {
@@ -40,13 +57,6 @@ h1, h2 {
 @font-face {
     font-family: 'strong';
     src: url('../fonts/Strong.ttf');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'luxena';
-    src: url('../fonts/Luxena.ttf');
     font-weight: normal;
     font-style: normal;
 }
@@ -105,13 +115,16 @@ html, body {
     align-items: center;
     gap: calc(16 * var(--u));
     text-decoration: none;
-    background: rgba(227, 222, 164, 0.4);
-    -webkit-backdrop-filter: blur(calc(3 * var(--u))) saturate(140%) brightness(1.05);
-    backdrop-filter: blur(calc(3 * var(--u))) saturate(140%) brightness(1.05);
-    box-shadow:
-        inset calc(2 * var(--u)) calc(2 * var(--u)) calc(3 * var(--u)) rgba(255, 255, 255, 0.55),
-        inset calc(-2 * var(--u)) calc(-2 * var(--u)) calc(3 * var(--u)) rgba(41, 0, 36, 0.25),
-        0 calc(8 * var(--u)) calc(24 * var(--u)) rgba(41, 0, 36, 0.25);
+    background: var(--glass-border-olive-wood);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border-midnight-violet);
+    transition: transform 0.5s ease;
+}
+
+
+.back-utama:hover {
+    transform: scale(1.1);
 }
 
 .logo-back {
@@ -591,7 +604,13 @@ html, body {
     line-height: 1;
     font-size: calc(24 * var(--u));
     text-box: trim-both cap alphabetic;
+    transition: transform 0.5s ease;
 }
+
+.name-nonaktif:hover {
+    transform: scale(1.1);
+}
+
 .name-aktif a,
 .name-nonaktif a {
     text-decoration: none;
