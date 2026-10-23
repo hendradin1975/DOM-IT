@@ -25,7 +25,6 @@ lagu.addEventListener("timeupdate", function () {
     waktuMundur.textContent = "-" + ubahWaktu(total - maju);
 });
 
-// lagu loncat saat slider digeser
 slider.addEventListener("input", function () {
     lagu.currentTime = (slider.value / 100) * lagu.duration;
 });

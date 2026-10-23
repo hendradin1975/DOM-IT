@@ -18,42 +18,42 @@ h1, h2 {
 /* font */
 @font-face {
     font-family: 'wanpis';
-    src: url('../Fonts/OnePiece.ttf');
+    src: url('../fonts/OnePiece.ttf');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'druk';
-    src: url('../Fonts/Druk.otf');
+    src: url('../fonts/Druk.otf');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'montserrat';
-    src: url('../Fonts/Montserrat.ttf');
+    src: url('../fonts/Montserrat.ttf');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'strong';
-    src: url('../Fonts/Strong.ttf');
+    src: url('../fonts/Strong.ttf');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'luxena';
-    src: url('../Fonts/Luxena.ttf');
+    src: url('../fonts/Luxena.ttf');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'MountSagilite';
-    src: url('../Fonts/MountSagilite.otf');
+    src: url('../fonts/MountSagilite.otf');
     font-weight: normal;
     font-style: normal;
 }
