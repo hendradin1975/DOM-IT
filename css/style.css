@@ -564,7 +564,7 @@ html, body {
 /* opsi nama */
 .name-aktif {
     background-color: #290024;
-    width: calc(150 * var(--u));
+    width: calc(50 * var(--u));
     height: calc(50 * var(--u));
     border-radius: calc(25 * var(--u));
     display: flex;
