@@ -36,7 +36,6 @@ html, body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 40%;
 }
 
 .latar-transparan {
@@ -55,4 +54,78 @@ html, body {
     margin-inline: auto;
     display: flex;
     flex-direction: column;
+}
+
+.judul {
+    height: calc(215 * var(--u));
+    font-family: outfit;
+    font-size: calc(150 * var(--u));
+    line-height: 0.8;
+    color: #F2F5E2;
+}
+
+
+.cont-definisi {
+    height: calc(360 * var(--u));
+    background-color: #290024;
+    border-radius: calc(54 * var(--u));
+    display: flex;
+    padding: calc(24 * var(--u));
+}
+
+.text-definisi {
+    display: flex;
+    flex-direction: column;
+    gap: calc(29 * var(--u));
+    align-items: center;
+}
+
+.text-definisi h1 {
+    font-family: outfit;
+    color: #F2F5E2;
+    font-size: calc(90 * var(--u));
+    line-height: 0.8;
+}
+
+.text-definisi h2 {
+    font-family: outfit;
+    color: #F2F5E2;
+    font-size: calc(24 * var(--u));
+}
+
+.gambar-definisi {
+    width: calc(454 * var(--u));
+    height: calc(312 * var(--u));
+    border-radius: calc(30 * var(--u));
+}
+
+.gambar-definisi img {
+    width: 100%;
+    height: 100%;
+    border-radius: calc(30 * var(--u));
+}
+
+.opsi {
+    height: calc(124 * var(--u));
+    background-color: #E3DEA4;
+}
+
+.next {
+    height: calc(153 * var(--u));
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.cont-next {
+    background-color: #D4954D;
+    height: calc(80 * var(--u));
+    width: calc(180 * var(--u));
+    border-radius: calc(30 * var(--u)) calc(30 * var(--u)) 0 calc(30 * var(--u));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: outfit;
+    font-size: calc(48 * var(--u));
+    text-decoration: none;
 }
