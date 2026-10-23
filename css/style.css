@@ -15,6 +15,7 @@ h1, h2 {
     margin: 0;
 }
 
+/* font */
 @font-face {
     font-family: 'wanpis';
     src: url('../Fonts/OnePiece.ttf');
@@ -36,13 +37,35 @@ h1, h2 {
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'strong';
+    src: url('../Fonts/Strong.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'luxena';
+    src: url('../Fonts/Luxena.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MountSagilite';
+    src: url('../Fonts/MountSagilite.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* tinggi lebar */
 html, body {
-    font-family: 'druk', sans-serif;
     margin: 0;
     width: 100%;
     height: 100%;
 }
 
+/* latar */
 .container-utama {
     width: 100%;
     min-height: 100vh;
@@ -58,7 +81,7 @@ html, body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: stretch;
+    align-items: center;
     padding: calc(48 * var(--u));
 }
 
@@ -70,6 +93,7 @@ html, body {
     flex-direction: column;
 }
 
+/* tombol back */
 .back-utama {
     height: 100%;
     display: flex;
@@ -112,8 +136,56 @@ html, body {
     text-box: trim-both cap alphabetic;
 }
 
+.container-atas {
+    display: flex;
+    align-items: flex-start;
+    gap: calc(32 * var(--u));
+}
 
+.back-utama {
+    flex: none;
+}
 
+.teks-jalan {
+    flex: 1;
+    min-width: 0;
+    height: calc(70 * var(--u));
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.jalur {
+    display: flex;
+    width: max-content;
+    animation: geser 20s linear infinite;
+}
+
+.isi {
+    display: flex;
+    flex: none;
+}
+
+.isi span {
+    font-family: 'druk', sans-serif;
+    font-size: calc(36 * var(--u));
+    line-height: 1;
+    color: #F2F5E2;
+    white-space: nowrap;
+    padding-right: calc(60 * var(--u));
+}
+
+@keyframes geser {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
 
 .container-bawah {
     display: flex;
@@ -127,6 +199,7 @@ html, body {
     height: 100%;
 }
 
+/* foto bounty */
 .container-bawah-kiri img {
     display: block;
     height: 100%;
@@ -142,6 +215,7 @@ html, body {
     flex-direction: column;
 }
 
+/* nama dan IG */
 .nama-IG {
     height: calc(177 * var(--u));
     width: auto;
@@ -181,9 +255,10 @@ html, body {
 .IG h2 {
     font-size: calc(40 * var(--u));
     color: #F2F5E2;
-    font-family: 'montserrat';
+    font-family: 'lexend';
 }
 
+/* kotak profil, hobi, lagu dan quotes */
 .biodata {
     height: calc(417 * var(--u));
     width: auto;
@@ -199,18 +274,18 @@ html, body {
 }
 
 .biodata .profil {
-    font-family: 'druk';
     color: #F2F5E2;
     background-color: #775533;
     margin: calc(20 * var(--u));
     padding: calc(19 * var(--u)) calc(20 * var(--u)) calc(20 * var(--u)) calc(20 * var(--u));
     border-radius: 0 calc(30 * var(--u)) 0 0;
     height: calc(135 * var(--u));
+    box-shadow: calc(5 * var(--u)) calc(10 * var(--u)) calc(5 * var(--u)) 0 rgba(0, 0, 0, 0.25);
 }
 
 .profil h1 {
-    font-family: 'druk';
-    font-size: calc(36 * var(--u));
+    font-family: 'strong';
+    font-size: calc(32 * var(--u));
     margin-block: 0;
     padding-block: 0;
     line-height: 1;
@@ -218,9 +293,8 @@ html, body {
 }
 
 .profil h2 {
-    font-family: 'montserrat';
+    font-family: 'lexend';
     font-size: calc(24 * var(--u));
-    font-weight: 600;
     line-height: 1;
 }
 
@@ -237,26 +311,29 @@ html, body {
     justify-content: space-between;
     background-color: #775533;
     flex: 57;
-    font-family: 'druk';
-    padding: calc(19 * var(--u)) calc(10 * var(--u)) calc(20 * var(--u)) calc(20 * var(--u));
+    padding: calc(18 * var(--u)) calc(10 * var(--u)) calc(20 * var(--u)) calc(20 * var(--u));
     border-radius: 0 calc(20 * var(--u)) calc(20 * var(--u)) 0;
+    box-shadow: calc(5 * var(--u)) calc(10 * var(--u)) calc(5 * var(--u)) 0 rgba(0, 0, 0, 0.25);
 }
 
 .text-hobi h1 {
-    font-size: calc(36 * var(--u));
+    font-family: 'strong';
+    font-size: calc(32 * var(--u));
     color: #F2F5E2;
+    margin-bottom: calc(6 * var(--u));
 }
 
 .text-hobi ul {
     margin: 0;
-    padding-left: calc(25 * var(--u));
+    padding-left: calc(24 * var(--u));
 }
 
 .text-hobi li {
-    font-family: 'montserrat';
+    font-family: 'Lexend';
     font-size: calc(20 * var(--u));
     line-height: 1.3;
     color: #F2F5E2;
+    margin: 0;
 }
 
 .gambar-hobi {
@@ -268,23 +345,176 @@ html, body {
     width: 100%;
     height: 100%;
     border-radius: calc(10 * var(--u));
+    object-fit: cover;
 }
 
 .container-lagu {
     background-color: #775533;
     flex: 43;
-    padding: calc(19 * var(--u)) calc(20 * var(--u)) calc(20 * var(--u)) calc(20 * var(--u));
+    padding: calc(12 * var(--u));
     border-radius: calc(20 * var(--u)) 0 0 calc(20 * var(--u));
+    display: flex;
+    gap: calc(20 * var(--u));
+    box-shadow: calc(5 * var(--u)) calc(10 * var(--u)) calc(5 * var(--u)) 0 rgba(0, 0, 0, 0.25);
 }
 
+.container-cover {
+    flex: none;
+    width: calc(108 * var(--u));
+    height: calc(108 * var(--u));
+}
+
+.container-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: calc(10 * var(--u));
+    display: block;
+}
+
+.info-lagu {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.judul-star {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: #F2F5E2;
+    margin-bottom: calc(10 * var(--u));
+    margin-top: calc(10 * var(--u));
+}
+
+.nama-lagu {
+    font-family: 'MountSagilite';
+    font-size: calc(20 * var(--u));
+    line-height: 1;
+}
+
+.nama-artis {
+    font-family: 'MountSagilite';
+    font-size: calc(15 * var(--u));
+    line-height: 1;
+}
+
+.star {
+    width: calc(22 * var(--u));
+    height: auto;
+}
+
+.kontrol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: calc(30 * var(--u));
+    margin-bottom: calc(14 * var(--u));
+}
+
+.kontrol .btn-play {
+    width: calc(24 * var(--u));
+    height: calc(24 * var(--u));
+}
+
+.skip-mundur, .skip-maju {
+    height: calc(15 * var(--u));
+    width: auto;
+}
+
+.skip-maju {
+    transform: rotate(180deg);
+}
+
+#slider {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: calc(8 * var(--u));
+    margin: 0;
+    border-radius: 999px;
+    background: rgba(242, 245, 226, 0.35);
+    cursor: pointer;
+    margin-bottom: calc(2 * var(--u));
+}
+
+#slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: calc(14 * var(--u));
+    height: calc(14 * var(--u));
+    border-radius: 50%;
+    background: #F2F5E2;
+    border: none;
+}
+
+#slider::-moz-range-thumb {
+    width: calc(14 * var(--u));
+    height: calc(14 * var(--u));
+    border-radius: 50%;
+    background: #F2F5E2;
+    border: none;
+}
+
+.waktu {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'montserrat';
+    font-size: calc(12 * var(--u));
+    color: #F2F5E2;
+}
+
+.btn-play {
+    width: calc(24 * var(--u));
+    height: calc(24 * var(--u));
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    transition: transform 0.3s ease;
+}
+
+.btn-play img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.btn-play .ikon-pause {
+    display: none;
+}
+
+.btn-play.main .ikon-play {
+    display: none;
+}
+
+.btn-play.main .ikon-pause {
+    display: block;
+}
+
+
+/* QUOTES */
 .biodata .quotes {
     background-color: #775533;
     height: calc(70 * var(--u));
     margin: calc(20 * var(--u)) calc(20 * var(--u)) 0 calc(20 * var(--u));
     border-radius: 0 0 0 calc(30 * var(--u));
     padding: calc(20 * var(--u));
+    box-shadow: calc(5 * var(--u)) calc(10 * var(--u)) calc(5 * var(--u)) 0 rgba(0, 0, 0, 0.25);
+    color: #F2F5E2;
+    display: flex;
+    justify-content: center;
+    padding-top: calc(25 * var(--u));
+    font-family: 'MountSagilite';
+    font-size: calc(20 * var(--u));
 }
 
+/* NAVBAR */
 .navbar {
     height: calc(108 * var(--u));
     width: auto;
@@ -301,10 +531,11 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: calc(10 * var(--u));
 }
 
 .container-list h1 {
-    font-family: 'druk';
+    font-family: 'lexend';
     color: #F2F5E2;
 }
 
@@ -330,6 +561,7 @@ html, body {
         0 calc(8 * var(--u)) calc(24 * var(--u)) rgba(41, 0, 36, 0.25);
 }
 
+/* opsi nama */
 .hendra {
     background-color: #290024;
     width: calc(150 * var(--u));
@@ -383,4 +615,17 @@ html, body {
     align-items: center;
     justify-content: center;
     color: #F2F5E2;
+}
+
+
+.container-list h1,
+.hendra h1,
+.ardika h1,
+.djasta h1,
+.suwang h1,
+.vidya h1 {
+    margin: 0;
+    line-height: 1;
+    font-size: calc(24 * var(--u));
+    text-box: trim-both cap alphabetic;
 }
