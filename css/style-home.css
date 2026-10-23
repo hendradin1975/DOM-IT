@@ -1,0 +1,58 @@
+:root {
+    --beige: #F2F5E2;
+    --vanilla-custard: #E3DEA4;
+    --golden-apricot: #D4954D;
+    --olive-wood: #775533;
+    --midnight-violet: #290024;
+    --u: min(100vw / 1440, 100vh / 900);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'outfit';
+    src: url('../Fonts/Outfit-ExtraBold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* latar */
+.container-utama {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('../images/Latar.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 40%;
+}
+
+.latar-transparan {
+    background-color: rgba(41, 0, 36, 0.7);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: calc(48 * var(--u));
+}
+
+.container-tengah {
+    width: 100%;
+    max-width: calc(1344 * var(--u));
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+}
