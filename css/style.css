@@ -562,7 +562,7 @@ html, body {
 }
 
 /* opsi nama */
-.hendra {
+.name-aktif {
     background-color: #290024;
     width: calc(50 * var(--u));
     height: calc(50 * var(--u));
@@ -573,7 +573,7 @@ html, body {
     color: #F2F5E2;
 }
 
-.ardika {
+.name-nonaktif {
     background-color: #290024;
     width: calc(50 * var(--u));
     height: calc(50 * var(--u));
@@ -583,49 +583,17 @@ html, body {
     justify-content: center;
     color: #F2F5E2;
 }
-
-.djasta {
-    background-color: #290024;
-    width: calc(50 * var(--u));
-    height: calc(50 * var(--u));
-    border-radius: calc(25 * var(--u));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #F2F5E2;
-}
-
-.suwang {
-    background-color: #290024;
-    width: calc(50 * var(--u));
-    height: calc(50 * var(--u));
-    border-radius: calc(25 * var(--u));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #F2F5E2;
-}
-
-.vidya {
-    background-color: #290024;
-    width: calc(150 * var(--u));
-    height: calc(50 * var(--u));
-    border-radius: calc(25 * var(--u));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #F2F5E2;
-}
-
 
 .container-list h1,
-.hendra h1,
-.ardika h1,
-.djasta h1,
-.suwang h1,
-.vidya h1 {
+.name-aktif h1,
+.name-nonaktif h1 {
     margin: 0;
     line-height: 1;
     font-size: calc(24 * var(--u));
     text-box: trim-both cap alphabetic;
+}
+.name-aktif a,
+.name-nonaktif a {
+    text-decoration: none;
+    color: #F2F5E2;
 }
