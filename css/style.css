@@ -332,7 +332,7 @@ html, body {
 
 .hendra {
     background-color: #290024;
-    width: calc(150 * var(--u));
+    width: calc(50 * var(--u));
     height: calc(50 * var(--u));
     border-radius: calc(25 * var(--u));
     display: flex;
@@ -343,7 +343,7 @@ html, body {
 
 .ardika {
     background-color: #290024;
-    width: calc(50 * var(--u));
+    width: calc(150 * var(--u));
     height: calc(50 * var(--u));
     border-radius: calc(25 * var(--u));
     display: flex;
