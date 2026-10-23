@@ -2,6 +2,7 @@ const lagu = document.querySelector("#lagu");
 const tombol = document.querySelector("#btn-play");
 const slider = document.querySelector("#slider");
 
+// Mengontrol pemutaran lagu
 tombol.addEventListener("click", function () {
     if (lagu.paused) {
         lagu.play();
@@ -25,6 +26,7 @@ lagu.addEventListener("timeupdate", function () {
     waktuMundur.textContent = "-" + ubahWaktu(total - maju);
 });
 
+// Atur slider untuk mengubah posisi lagu
 slider.addEventListener("input", function () {
     lagu.currentTime = (slider.value / 100) * lagu.duration;
 });
