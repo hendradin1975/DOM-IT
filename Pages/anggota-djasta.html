@@ -1,114 +1,153 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../css/style.css" />
+    <style>
+    .nama {
+        font-size: clamp(2rem, 5vw, 4rem);
+        line-height: 1.15;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        white-space: normal;
+    }
+</style>
+  </head>
+  <body>
     <div class="container-utama">
-        <div class="layer-transparan">
-            <div class="container-tengah">
+      <div class="layer-transparan">
+        <div class="container-tengah">
+          <div class="container-atas">
+            <a class="back-utama" href="../index.html">
+              <div class="logo-back">
+                <img src="../Assets/logo-back.svg" alt="" />
+              </div>
+              <div class="text-back">BACK</div>
+            </a>
 
-                <!-- Tombol Back -->
-                <div class="container-atas">
-                    <a class="back-utama" href="../index.html">
-                        <div class="logo-back"><img src="../Assets/logo-back.svg" alt=""></div>
-                        <div class="text-back">BACK</div>
-                    </a>
+            <div class="teks-jalan">
+              <div class="jalur">
+                <div class="isi">
+                  <span>IT-Bootcamp Grup DOM-IT</span>
+                  <span>IT-Bootcamp Grup DOM-IT</span>
+                  <span>IT-Bootcamp Grup DOM-IT</span>
+                  <span>IT-Bootcamp Grup DOM-IT</span>
                 </div>
-
-                <div class="container-bawah">
-
-                    <!-- Poster "WANTED" -->
-                    <div class="container-bawah-kiri">
-                        <img src="/images/wanted_djasta.jpg" alt=" ">
-                    </div>
-
-                    <!-- Konten kanan -->
-                    <div class="container-bawah-kanan">
-
-                        <!-- Nama & Instagram -->
-                        <div class="nama-IG">
-                            <h1 class="nama">I PUTU DJASTASENA PUTRA</h1>
-                            <div class="IG">
-                                <img class="logo-IG" src="../Assets/logo-IG.png" alt="">
-                                <img class="logo-separator" src="../Assets/logo-separator.png" alt="">
-                                <h2>djasta_sena</h2>
-                            </div>
-                        </div>
-
-                        <!-- Biodata -->
-                        <div class="biodata">
-
-                            <div class="profil">
-                                <h1>PROFIL</h1>
-                                <h2>[ISI: deskripsi profil singkat, mis. Mahasiswa semester X prodi ..., Universitas ...]</h2>
-                            </div>
-
-                            <div class="hobi-lagu">
-                                <div class="container-hobi">
-                                    Ngegym
-                                </div>
-                                <div class="lagu">
-                                    <div class="info-lagu">
-                                        <img class="cover-lagu" src="[ISI: path cover lagu]" alt="[ISI: judul lagu]">
-                                        <div class="teks-lagu">
-                                            <h3>Circus</h3>
-                                            <p> Altare.alt & Eclipse</p>
-                                        </div>
-                                    </div>
-                                    <audio id="lagu" src="circus.mp3" preload="metadata"></audio>
-                                    <div class="kontrol-lagu">
-                                        <button class="btn-prev">[ICON PREV]</button>
-                                        <button class="btn-play">[ICON PLAY/PAUSE]</button>
-                                        <button class="btn-next">[ICON NEXT]</button>
-                                    </div>
-                                    <div class="progress-lagu">
-                                        <span class="waktu-sekarang">[00:00]</span>
-                                        <input type="range" class="slider-lagu" value="0" min="0">
-                                        <span class="waktu-total">[00:00]</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="quotes">[ISI: quotes/kata-kata pribadi]</div>
-
-                        </div>
-
-                        <!-- Navbar Bounty List -->
-                        <div class="navbar">
-                            <div class="container-list">
-                                <h1>BOUNTY LIST</h1>
-                                <img src="../Assets/logo-back.svg" alt="">
-                            </div>
-                            <div class="container-nama">
-                                <div class="container-nama-2">
-                                    <a class="anggota" href="[ISI: link halaman anggota 1]">
-                                        <h1>[ISI: NAMA ANGGOTA 1]</h1>
-                                    </a>
-                                    <a class="anggota" href="[ISI: link halaman anggota 2]">
-                                        <h1>[ISI: NAMA ANGGOTA 2]</h1>
-                                    </a>
-                                    <a class="anggota" href="[ISI: link halaman anggota 3]">
-                                        <h1>[ISI: NAMA ANGGOTA 3]</h1>
-                                    </a>
-                                    <a class="anggota" href="[ISI: link halaman anggota 4]">
-                                        <h1>[ISI: NAMA ANGGOTA 4]</h1>
-                                    </a>
-                                    <a class="anggota" href="[ISI: link halaman anggota 5]">
-                                        <h1>[ISI: NAMA ANGGOTA 5]</h1>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
+                <div class="isi">
+                  <span>IT-Bootcamp Grup DOM-IT</span>
+                  <span>IT-Bootcamp Grup DOM-IT</span>
+                  <span>IT-Bootcamp Grup DOM-IT</span>
+                  <span>IT-Bootcamp Grup DOM-IT</span>
                 </div>
+              </div>
             </div>
+          </div>
+          <div class="container-bawah">
+            <div class="container-bawah-kiri">
+              <img src="../images/wanted_djasta.jpg" alt="" />
+            </div>
+            <div class="container-bawah-kanan">
+              <div class="nama-IG">
+                <h1 class="nama">I PUTU DJASTASENA PUTRA</h1>
+                <div class="IG">
+                  <img class="logo-IG" src="../Assets/logo-IG.png" alt="" />
+                  <img
+                    class="logo-separator"
+                    src="../Assets/logo-separator.png"
+                    alt=""
+                  />
+                  <h2>djasta_sena</h2>
+                </div>
+              </div>
+              <div class="biodata">
+                <div class="profil">
+                  <h1>PROFIL SINGKAT</h1>
+                  <h2>
+                    Mahasiswa aktif semester 1 Prodi Sistem Informasi 
+                    Universitas Pendidikan Ganesha
+                  </h2>
+                </div>
+                <div class="hobi-lagu">
+                  <div class="container-hobi">
+                    <div class="text-hobi">
+                      <h1>HOBI</h1>
+                      <ul>
+                        <li>Ngegym</li>
+                      </ul>
+                    </div>
+                    <div class="gambar-hobi">
+                      <img src="../images/hoby-djasta.jpg" alt="" />
+                    </div>
+                  </div>
+
+                  <div class="container-lagu">
+                    <div class="container-cover">
+                      <img src="../images/lagu-djasta.jpg" alt="" />
+                    </div>
+
+                    <div class="info-lagu">
+                      <div class="judul-star">
+                        <div class="judul">
+                          <div class="nama-lagu">Circus</div>
+                          <div class="nama-artis">Altare.alt & Eclipse</div>
+                        </div>
+                        <img class="star" src="../Assets/Star.svg" alt="" />
+                      </div>
+
+                      <div class="kontrol">
+                        <img class="skip-mundur" src="../Assets/skip.png" alt="" />
+                        <button class="btn-play" id="btn-play">
+                          <img class="ikon-play" src="../Assets/Play.svg" alt="" />
+                          <img class="ikon-pause" src="../Assets/Pause.svg" alt="" />
+                        </button>
+                        <img class="skip-maju" src="../Assets/skip.png" alt="" />
+                      </div>
+
+                      <input type="range" id="slider" min="0" max="100" value="0" />
+
+                      <div class="waktu">
+                        <span id="waktu-maju">0:00</span>
+                        <span id="waktu-mundur">-0:00</span>
+                      </div>
+                    </div>
+
+                    <audio id="lagu" src="../Song/circus.mp3" preload="metadata"></audio>
+                  </div>
+                </div>
+                <div class="quotes">"All the returns in life, whether in wealth, relationships, or knowledge, come from compound interest."</div>
+              </div>
+              <div class="navbar">
+                <div class="container-list">
+                  <h1>BOUNTY LIST</h1>
+                  <img src="../Assets/logo-back.svg" alt="" />
+                </div>
+                <div class="container-nama">
+                  <div class="container-nama-2">
+                    <div class="hendra">
+                      <h1>HENDRA</h1>
+                    </div>
+                    <div class="ardika">
+                      <h1>A</h1>
+                    </div>
+                    <div class="djasta">
+                      <h1>D</h1>
+                    </div>
+                    <div class="suwang">
+                      <h1>S</h1>
+                    </div>
+                    <div class="vidya">
+                      <h1>V</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
     <script src="../js/script.js"></script>
-</body>
+  </body>
 </html>
