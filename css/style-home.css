@@ -22,6 +22,49 @@ h1, h2 {
     font-style: normal;
 }
 
+/* font */
+@font-face {
+    font-family: 'wanpis';
+    src: url('../Fonts/OnePiece.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'druk';
+    src: url('../Fonts/Druk.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'montserrat';
+    src: url('../Fonts/Montserrat.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'strong';
+    src: url('../Fonts/Strong.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'luxena';
+    src: url('../Fonts/Luxena.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MountSagilite';
+    src: url('../Fonts/MountSagilite.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html, body {
     margin: 0;
     width: 100%;
@@ -64,20 +107,21 @@ html, body {
     color: #F2F5E2;
 }
 
-
 .cont-definisi {
     height: calc(360 * var(--u));
     background-color: #290024;
     border-radius: calc(54 * var(--u));
     display: flex;
     padding: calc(24 * var(--u));
+    gap: calc(24 * var(--u));
 }
 
 .text-definisi {
     display: flex;
     flex-direction: column;
     gap: calc(29 * var(--u));
-    align-items: center;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .text-definisi h1 {
@@ -91,30 +135,131 @@ html, body {
     font-family: outfit;
     color: #F2F5E2;
     font-size: calc(24 * var(--u));
+    text-align: start;
 }
 
 .gambar-definisi {
     width: calc(454 * var(--u));
     height: calc(312 * var(--u));
+    flex-shrink: 0;
     border-radius: calc(30 * var(--u));
 }
 
 .gambar-definisi img {
+    display: block;
     width: 100%;
     height: 100%;
+    object-fit: contain;
     border-radius: calc(30 * var(--u));
 }
 
-.opsi {
-    height: calc(124 * var(--u));
-    background-color: #E3DEA4;
+.container-empat {
+    height: calc(100 * var(--u));
+    display: flex;
+    gap: calc(24 * var(--u));
+    margin-top: calc(24 * var(--u));
+}
+
+.container-satu {
+    flex: 1;
+    min-width: 0;
+    border-radius: calc(20 * var(--u));
+    background: rgba(41, 0, 36, 0.45);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(242, 245, 226, 0.15);
+
+    display: flex;
+    align-items: center;
+    padding: calc(18 * var(--u));
+    gap: calc(12 * var(--u));
+}
+
+.logo {
+    height: calc(50 * var(--u));
+}
+
+.logo img {
+    height: 100%;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    color: #F2F5E2;
+}
+
+.text h1 {
+    font-family: 'druk';
+    font-size: calc(28 * var(--u));
+}
+
+.text h2 {
+    font-family: 'druk';
+    font-size: calc(16 * var(--u));
 }
 
 .next {
-    height: calc(153 * var(--u));
+    height: calc(105 * var(--u));
     display: flex;
     justify-content: end;
     align-items: end;
+}
+
+.next {
+    height: calc(105 * var(--u));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: calc(24 * var(--u));
+}
+
+/* Area teks berjalan */
+.teks-berjalan {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+
+    -webkit-mask-image: linear-gradient(to right,
+            transparent,
+            black 15%,
+            black 85%,
+            transparent);
+    mask-image: linear-gradient(to right,
+            transparent,
+            black 15%,
+            black 85%,
+            transparent);
+}
+
+.teks-slider {
+    display: flex;
+    width: max-content;
+    animation: jalan 10s linear infinite;
+}
+
+.teks-grup {
+    display: flex;
+    flex-shrink: 0;
+}
+
+.teks-grup span {
+    flex-shrink: 0;
+    padding-right: calc(24 * var(--u));
+    font-family: outfit;
+    font-size: calc(40 * var(--u));
+    color: var(--beige);
+}
+
+@keyframes jalan {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
 }
 
 .cont-next {
@@ -128,4 +273,13 @@ html, body {
     font-family: outfit;
     font-size: calc(48 * var(--u));
     text-decoration: none;
+    background: rgba(119, 85, 51, 0.45);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(242, 245, 226, 0.2);
+}
+
+.cont-next a {
+    text-decoration: none;
+    color: var(--beige);
 }
